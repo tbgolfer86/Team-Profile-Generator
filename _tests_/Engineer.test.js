@@ -1,7 +1,7 @@
 const Engineer = require('../lib/Engineer.js');
 
 describe('Engineer', () => {
-    it('should create a new engineer', () => {
+    it('should create a new engineer object', () => {
         const newEngineer = new Engineer();
         expect(typeof newEngineer).toBe('object');
     });
