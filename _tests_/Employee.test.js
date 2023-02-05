@@ -1,24 +1,21 @@
 const Employee = require('../lib/Employee.js');
 
 describe('Employee', () => {
-    it('should create a new employee', () => {
+    it('should create a new employee object', () => {
         const newEmployee = new Employee();
         expect(typeof newEmployee).toBe('object');
     });
     it('should have a name', () => {
-        const name = 'Tony';
         const newEmployee = new Employee('Tony');
-        expect(newEmployee.name).toBe(name);
+        expect(newEmployee.name).toBe('Tony');
     });
     it('should have an ID', () => {
-        const id = 7;
         const newEmployee = new Employee('Tony', 7);
-        expect(newEmployee.id).toBe(id);
+        expect(newEmployee.id).toBe(7);
     });
     it('should have an email address', () => {
-        const email = 'tbj86@outlook.com'
         const newEmployee = new Employee('Tony', 7, 'tbj86@outlook.com');
-        expect(newEmployee.email).toBe(email);
+        expect(newEmployee.email).toBe('tbj86@outlook.com');
     });
     it('should be able to get name', () => {
         const newEmployee = new Employee('Tony');

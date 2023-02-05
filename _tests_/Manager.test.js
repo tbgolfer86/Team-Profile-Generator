@@ -6,24 +6,20 @@ describe('Manager', () => {
         expect(typeof newManager).toBe('object');
     });
     it('should have a name', () => {
-        const name = 'Tony';
         const newManager = new Manager('Tony');
-        expect(newManager.name).toBe(name);
+        expect(newManager.name).toBe('Tony');
     });
     it('should have an ID', () => {
-        const id = 7;
         const newManager = new Manager('Tony', 7);
-        expect(newManager.id).toBe(id);
+        expect(newManager.id).toBe(7);
     });
     it('should have an email address', () => {
-        const email = 'tbj86@outlook.com';
         const newManager = new Manager('Tony', 7, 'tbj86@outlook.com');
-        expect(newManager.email).toBe(email);
+        expect(newManager.email).toBe('tbj86@outlook.com');
     });
     it('should have an office number', () => {
-        const officeNumber = 100;
         const newManager = new Manager('Tony', 7, 'tbj86@outlook.com', 100);
-        expect(newManager.officeNumber).toBe(officeNumber);
+        expect(newManager.officeNumber).toBe(100);
     });
     it('should be able to get office number', () => {
         const newManager = new Manager('Tony', 7, 'tbj86@outlook.com', 100);
