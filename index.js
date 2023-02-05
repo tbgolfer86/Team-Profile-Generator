@@ -6,6 +6,7 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
+const team = [];
 
 const managerQuestions = [{
     type: 'input',
@@ -29,12 +30,12 @@ const managerQuestions = [{
   },
 ];
 
-function getManager() {
+function buildTeam() {
     inquirer
         .prompt(managerQuestions)
         .then((managerData) => {
           manager = new Manager(managerData.name, managerData.id, managerData.email, managerData.officeNumber);
-          console.log(manager);
+          team.push(manager);
           addEmployee();
     });
 };
@@ -66,7 +67,7 @@ function getEngineer() {
         .prompt(engineerQuestions)
         .then((engineerData) => {
           engineer = new Engineer(engineerData.name, engineerData.id, engineerData.email, engineerData.github);
-          console.log(engineer);
+          team.push(engineer);
           addEmployee();
     });
 };
@@ -98,12 +99,13 @@ function getIntern() {
         .prompt(internQuestions)
         .then((internData) => {
           intern = new Intern(internData.name, internData.id, internData.email, internData.school);
-          console.log(intern);
+          team.push(intern);
           addEmployee();
     });
 }
 
 function addEmployee () {
+    console.log(team)
     inquirer
         .prompt({
           type: 'list',
@@ -137,7 +139,7 @@ function writeToFile(fileName, data) {
   }
   
   function init() {
-    getManager()
+    buildTeam()
   }
   
   init();
