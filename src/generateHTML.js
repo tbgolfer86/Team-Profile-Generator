@@ -2,62 +2,73 @@ function generateManagerCard(data) {
   return `
   <div class="card" style="width: 18rem;">
    <div class="card-body">
-     <h5 class="card-title">${data[0].getRole()}</h5>
-     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+     <h5 class="card-title">${data[0].name}</h5>
+     <p class="card-text">${data[0].getRole()}</p>
    </div>
    <ul class="list-group list-group-flush">
-     <li class="list-group-item">An item</li>
-     <li class="list-group-item">A second item</li>
-     <li class="list-group-item">A third item</li>
+     <li class="list-group-item">${data[0].id}</li>
+     <li class="list-group-item"><a href="#" class="card-link">${data[0].email}</a></li>
+     <li class="list-group-item">${data[0].officeNumber}</li>
    </ul>
-   <div class="card-body">
-     <a href="#" class="card-link">Card link</a>
-     <a href="#" class="card-link">Another link</a>
-   </div>
   </div>
   `;
 };
 
 function generateEngineerCard(data) {
-  return `
-  <div class="card" style="width: 18rem;">
-   <div class="card-body">
-     <h5 class="card-title">${data[0].getRole()}</h5>
-     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-   </div>
-   <ul class="list-group list-group-flush">
-     <li class="list-group-item">An item</li>
-     <li class="list-group-item">A second item</li>
-     <li class="list-group-item">A third item</li>
-   </ul>
-   <div class="card-body">
-     <a href="#" class="card-link">Card link</a>
-     <a href="#" class="card-link">Another link</a>
-   </div>
-  </div>
-  `;
+  const engineers = [];
+  for (i = 0; i < data.length; i++) {
+    let role = data[i].getRole();
+    if (role == 'Engineer') {
+      engineers.push(data[i])
+    }
+    console.log(role);
+  }
+  console.log(data);
+  console.log(engineers)
+  for (i = 0; i < engineers.length; i++) {
+    return `
+    <div class="card" style="width: 18rem;">
+     <div class="card-body">
+       <h5 class="card-title">${engineers[i].name}</h5>
+       <p class="card-text">${engineers[i].getRole()}</p>
+     </div>
+     <ul class="list-group list-group-flush">
+       <li class="list-group-item">${engineers[i].id}</li>
+       <li class="list-group-item"><a href="#" class="card-link">${engineers[i].email}</a></li>
+       <li class="list-group-item">${engineers[i].gitHub}</li>
+     </ul>
+    </div>
+    `;
+  };
 };
 
 function generateInternCard(data) {
-  return `
-  <div class="card" style="width: 18rem;">
-   <div class="card-body">
-     <h5 class="card-title">${data[0].getRole()}</h5>
-     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-   </div>
-   <ul class="list-group list-group-flush">
-     <li class="list-group-item">An item</li>
-     <li class="list-group-item">A second item</li>
-     <li class="list-group-item">A third item</li>
-   </ul>
-   <div class="card-body">
-     <a href="#" class="card-link">Card link</a>
-     <a href="#" class="card-link">Another link</a>
-   </div>
-  </div>
-  `;
+  const interns = [];
+  for (i = 0; i < data.length; i++) {
+    let role = data[i].getRole();
+    if (role == 'Intern') {
+      interns.push(data[i])
+    }
+    console.log(role);
+  }
+  console.log(data);
+  console.log(interns)
+  for (i = 0; i < interns.length; i++) {
+    return `
+    <div class="card" style="width: 18rem;">
+     <div class="card-body">
+       <h5 class="card-title">${interns[i].name}</h5>
+       <p class="card-text">${interns[i].getRole()}</p>
+     </div>
+     <ul class="list-group list-group-flush">
+       <li class="list-group-item">${interns[i].id}</li>
+       <li class="list-group-item"><a href="#" class="card-link">${interns[i].email}</a></li>
+       <li class="list-group-item">${interns[i].school}</li>
+     </ul>
+    </div>
+    `;
+  };
 };
-
 
 function generateHTML(data) {
   return `
@@ -74,7 +85,6 @@ function generateHTML(data) {
      ${generateManagerCard(data)}
      ${generateEngineerCard(data)}
      ${generateInternCard(data)}
-   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </body>
   </html>
