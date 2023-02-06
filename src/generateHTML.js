@@ -24,19 +24,20 @@ function generateEngineerCard(data) {
   }
   console.log(engineers)
   for (i = 0; i < engineers.length; i++) {
-    return `
-    <div class="card" style="width: 18rem;">
-     <div class="card-body">
-       <h5 class="card-title">${engineers[i].name}</h5>
-       <p class="card-text">${engineers[i].getRole()}</p>
-     </div>
-     <ul class="list-group list-group-flush">
-       <li class="list-group-item">${engineers[i].id}</li>
-       <li class="list-group-item"><a href="#" class="card-link">${engineers[i].email}</a></li>
-       <li class="list-group-item">${engineers[i].gitHub}</li>
-     </ul>
-    </div>
-    `;
+    console.log(engineers[i].name)
+    // return `
+    // <div class="card" style="width: 18rem;">
+    //  <div class="card-body">
+    //    <h5 class="card-title">${engineers[i].name}</h5>
+    //    <p class="card-text">${engineers[i].getRole()}</p>
+    //  </div>
+    //  <ul class="list-group list-group-flush">
+    //    <li class="list-group-item">${engineers[i].id}</li>
+    //    <li class="list-group-item"><a href="#" class="card-link">${engineers[i].email}</a></li>
+    //    <li class="list-group-item">${engineers[i].gitHub}</li>
+    //  </ul>
+    // </div>
+    // `;
   };
 };
 

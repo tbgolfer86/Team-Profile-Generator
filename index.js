@@ -105,7 +105,6 @@ function getIntern() {
 };
 
 function addEmployee () {
-    console.log(team);
     inquirer
         .prompt({
           type: 'list',
