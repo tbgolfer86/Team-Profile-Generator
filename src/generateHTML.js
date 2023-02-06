@@ -80,7 +80,7 @@ function generateHTML(data) {
       <title>Team Profile Generator</title>
   </head>
   <body>
-    <div class="d-flex justify-content-around">
+    <div class="d-flex flex-wrap gap-3 justify-content-around">
      ${generateManagerCard(data)}
      ${generateEngineerCard(data)}
      ${generateInternCard(data)}
