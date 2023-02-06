@@ -22,23 +22,23 @@ function generateEngineerCard(data) {
       engineers.push(data[i])
     }
   }
-  console.log(engineers)
+  let response = ``;
   for (i = 0; i < engineers.length; i++) {
-    console.log(engineers[i].name)
-    // return `
-    // <div class="card" style="width: 18rem;">
-    //  <div class="card-body">
-    //    <h5 class="card-title">${engineers[i].name}</h5>
-    //    <p class="card-text">${engineers[i].getRole()}</p>
-    //  </div>
-    //  <ul class="list-group list-group-flush">
-    //    <li class="list-group-item">${engineers[i].id}</li>
-    //    <li class="list-group-item"><a href="#" class="card-link">${engineers[i].email}</a></li>
-    //    <li class="list-group-item">${engineers[i].gitHub}</li>
-    //  </ul>
-    // </div>
-    // `;
+    response += `
+    <div class="card" style="width: 18rem;">
+     <div class="card-body">
+       <h5 class="card-title">${engineers[i].name}</h5>
+       <p class="card-text">${engineers[i].getRole()}</p>
+     </div>
+     <ul class="list-group list-group-flush">
+       <li class="list-group-item">${engineers[i].id}</li>
+       <li class="list-group-item"><a href="#" class="card-link">${engineers[i].email}</a></li>
+       <li class="list-group-item">${engineers[i].gitHub}</li>
+     </ul>
+    </div>
+    `;
   };
+  return response;
 };
 
 const interns = [];
@@ -49,9 +49,9 @@ function generateInternCard(data) {
       interns.push(data[i])
     }
   }
-  console.log(interns)
+  let response = ``;
   for (i = 0; i < interns.length; i++) {
-    return `
+    response += `
     <div class="card" style="width: 18rem;">
      <div class="card-body">
        <h5 class="card-title">${interns[i].name}</h5>
@@ -65,6 +65,7 @@ function generateInternCard(data) {
     </div>
     `;
   };
+  return response;
 };
 
 function generateHTML(data) {
