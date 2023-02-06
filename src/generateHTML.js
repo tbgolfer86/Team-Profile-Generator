@@ -6,9 +6,9 @@ function generateManagerCard(data) {
      <p class="card-text">${data[0].getRole()}</p>
    </div>
    <ul class="list-group list-group-flush">
-     <li class="list-group-item">${data[0].id}</li>
-     <li class="list-group-item"><a href="#" class="card-link">${data[0].email}</a></li>
-     <li class="list-group-item">${data[0].officeNumber}</li>
+     <li class="list-group-item">ID: ${data[0].id}</li>
+     <li class="list-group-item">Email: <a href="#" class="card-link">${data[0].email}</a></li>
+     <li class="list-group-item">Office: ${data[0].officeNumber}</li>
    </ul>
   </div>
   `;
@@ -31,9 +31,9 @@ function generateEngineerCard(data) {
        <p class="card-text">${engineers[i].getRole()}</p>
      </div>
      <ul class="list-group list-group-flush">
-       <li class="list-group-item">${engineers[i].id}</li>
-       <li class="list-group-item"><a href="#" class="card-link">${engineers[i].email}</a></li>
-       <li class="list-group-item">${engineers[i].gitHub}</li>
+       <li class="list-group-item">ID: ${engineers[i].id}</li>
+       <li class="list-group-item">Email: <a href="#" class="card-link">${engineers[i].email}</a></li>
+       <li class="list-group-item">GitHub: ${engineers[i].gitHub}</li>
      </ul>
     </div>
     `;
@@ -58,9 +58,9 @@ function generateInternCard(data) {
        <p class="card-text">${interns[i].getRole()}</p>
      </div>
      <ul class="list-group list-group-flush">
-       <li class="list-group-item">${interns[i].id}</li>
-       <li class="list-group-item"><a href="#" class="card-link">${interns[i].email}</a></li>
-       <li class="list-group-item">${interns[i].school}</li>
+       <li class="list-group-item">ID: ${interns[i].id}</li>
+       <li class="list-group-item">Email: <a href="#" class="card-link">${interns[i].email}</a></li>
+       <li class="list-group-item">School: ${interns[i].school}</li>
      </ul>
     </div>
     `;
