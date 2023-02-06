@@ -1,53 +1,20 @@
 
 
 
-function generateHTML(data) {
-  return `# ${data.Title}
-  ${renderLicenseBadge(data.License)}
-  ## Description
-  ${data.Description}
-
----
-
-  ## Table of Contents  
-
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [License](#license)
-  - [How to Contribute](#contribute)
-  - [Tests](#tests)
-  - [Questions](#questions)
-
----
-
-  ## Installation
-  ${data.Installation}
-
----
-
-  ## Usage
-  ${data.Usage}
-
----
-
-  ## License
-  ${renderLicenseSection(data.License)}
-  
----
-
-  ## Contributing
-  ${data.Contributing}
-
----
-
-  ## Tests 
-  ${data.Tests}
-
----
-
-  ## Questions
-  If you have any questions about the project, open an issue at [${data.Github}](https://www.github.com/${data.Github}) or send an email to ${data.Email}.
-
+function generateHTML(team) {
+  return `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   ${team} 
+</body>
+</html>
 `;
 };
 
