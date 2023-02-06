@@ -21,9 +21,7 @@ function generateEngineerCard(data) {
     if (role == 'Engineer') {
       engineers.push(data[i])
     }
-    console.log(role);
   }
-  console.log(data);
   console.log(engineers)
   for (i = 0; i < engineers.length; i++) {
     return `
@@ -49,9 +47,7 @@ function generateInternCard(data) {
     if (role == 'Intern') {
       interns.push(data[i])
     }
-    console.log(role);
   }
-  console.log(data);
   console.log(interns)
   for (i = 0; i < interns.length; i++) {
     return `
