@@ -14,8 +14,8 @@ function generateManagerCard(data) {
   `;
 };
 
+const engineers = [];
 function generateEngineerCard(data) {
-  const engineers = [];
   for (i = 0; i < data.length; i++) {
     let role = data[i].getRole();
     if (role == 'Engineer') {
@@ -40,8 +40,8 @@ function generateEngineerCard(data) {
   };
 };
 
+const interns = [];
 function generateInternCard(data) {
-  const interns = [];
   for (i = 0; i < data.length; i++) {
     let role = data[i].getRole();
     if (role == 'Intern') {
