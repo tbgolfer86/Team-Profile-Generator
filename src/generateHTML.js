@@ -7,7 +7,7 @@ function generateManagerCard(data) {
    </div>
    <ul class="list-group list-group-flush">
      <li class="list-group-item">ID: ${data[0].id}</li>
-     <li class="list-group-item">Email: <a href="#" class="card-link">${data[0].email}</a></li>
+     <li class="list-group-item">Email: <a href="mailto: ${data[0].email}" class="card-link">${data[0].email}</a></li>
      <li class="list-group-item">Office: ${data[0].officeNumber}</li>
    </ul>
   </div>
@@ -32,7 +32,7 @@ function generateEngineerCard(data) {
      </div>
      <ul class="list-group list-group-flush">
        <li class="list-group-item">ID: ${engineers[i].id}</li>
-       <li class="list-group-item">Email: <a href="#" class="card-link">${engineers[i].email}</a></li>
+       <li class="list-group-item">Email: <a <a href="mailto: ${engineers[i].email}" class="card-link">${engineers[i].email}</a></li>
        <li class="list-group-item">GitHub: ${engineers[i].gitHub}</li>
      </ul>
     </div>
@@ -59,7 +59,7 @@ function generateInternCard(data) {
      </div>
      <ul class="list-group list-group-flush">
        <li class="list-group-item">ID: ${interns[i].id}</li>
-       <li class="list-group-item">Email: <a href="#" class="card-link">${interns[i].email}</a></li>
+       <li class="list-group-item">Email: <a href="mailto: ${interns[i].email}" class="card-link">${interns[i].email}</a></li>
        <li class="list-group-item">School: ${interns[i].school}</li>
      </ul>
     </div>
