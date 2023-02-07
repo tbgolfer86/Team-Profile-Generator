@@ -30,6 +30,7 @@ const managerQuestions = [{
   },
 ];
 
+//generates manager questions in terminal once application starts
 function buildTeam() {
     inquirer
         .prompt(managerQuestions)
@@ -62,6 +63,7 @@ const engineerQuestions = [{
   },
 ];
 
+//generates engineer questions
 function getEngineer() {
     inquirer
         .prompt(engineerQuestions)
@@ -94,6 +96,7 @@ const internQuestions = [{
   },
 ];
 
+//generates intern questions
 function getIntern() {
     inquirer
         .prompt(internQuestions)
@@ -104,6 +107,7 @@ function getIntern() {
     });
 };
 
+//generates menu to add a new employee
 function addEmployee () {
     inquirer
         .prompt({
@@ -131,6 +135,7 @@ function addEmployee () {
         });
 };
 
+//generates team.html file with a confirmation message in the terminal
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
     err ? console.log(err) : console.log('Successfully created your .html file!')

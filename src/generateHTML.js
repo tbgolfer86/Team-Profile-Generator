@@ -1,3 +1,4 @@
+//generates manager card HTML snippet
 function generateManagerCard(data) {
   return `
   <div class="card" style="width: 18rem;">
@@ -14,6 +15,7 @@ function generateManagerCard(data) {
   `;
 };
 
+//adds engineers to empty array and generates engineer card HTML snippets 
 const engineers = [];
 function generateEngineerCard(data) {
   for (i = 0; i < data.length; i++) {
@@ -41,6 +43,7 @@ function generateEngineerCard(data) {
   return response;
 };
 
+//adds interns to empty array and generates intern card HTML snippets 
 const interns = [];
 function generateInternCard(data) {
   for (i = 0; i < data.length; i++) {
@@ -68,6 +71,7 @@ function generateInternCard(data) {
   return response;
 };
 
+//generates full HTML with manager, engineer, and intern cards
 function generateHTML(data) {
   return `
   <!DOCTYPE html>
