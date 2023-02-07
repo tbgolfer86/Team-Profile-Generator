@@ -23,6 +23,11 @@
 
   ## Usage
   This is a Node.js command-line application.
+  [Walkthrough video that demonstrates its functionality](https://drive.google.com/file/d/17-aQ0ieNMIR9Jf4Zu_KnwlUOVkxqYhku/view)<br><br>
+  This screenshot shows it running in the terminal:
+![alt text](/assets/images/Screenshot%202023-02-07%20at%2012.50.10%20PM.png)<br>
+  This screenshot shows a sample HTML page that was created with the application:
+![alt text](/assets/images/Screenshot%202023-02-07%20at%2012.54.05%20PM.png)
 
 ---
 
