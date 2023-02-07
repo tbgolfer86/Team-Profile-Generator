@@ -32,8 +32,8 @@ function generateEngineerCard(data) {
      </div>
      <ul class="list-group list-group-flush">
        <li class="list-group-item">ID: ${engineers[i].id}</li>
-       <li class="list-group-item">Email: <a <a href="mailto: ${engineers[i].email}" class="card-link">${engineers[i].email}</a></li>
-       <li class="list-group-item">GitHub: ${engineers[i].gitHub}</li>
+       <li class="list-group-item">Email: <a href="mailto: ${engineers[i].email}" class="card-link">${engineers[i].email}</a></li>
+       <li class="list-group-item">GitHub: <a target="_blank" href="https://github.com/${engineers[i].gitHub}">${engineers[i].gitHub}</a></li>
      </ul>
     </div>
     `;
