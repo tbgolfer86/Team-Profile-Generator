@@ -37,7 +37,7 @@
 ---
 
   ## Tests 
-  This application was tested using Jest.
+  This application was tested using [Jest 29.4.2](https://jestjs.io/docs/getting-started).
 
 ---
 
